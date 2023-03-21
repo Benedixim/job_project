@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task 3</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/static/style/home.css"  th:href="@{/style/home.css}" />
+</head>
+<body>
+
+    <div>
+        <br>
+        <table  class="table">
+
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Material Documentation</th>
+                <th>Item</th>
+                <th>Documentation Date</th>
+                <th>Posting Date</th>
+                <th>Material Description</th>
+                <th>Quantity</th>
+                <th>BUn</th>
+                <th>AmountLC</th>
+                <th>Crcy</th>
+                <th>UserName</th>
+                <th>Authorized delivery</th>
+            </tr>
+            </thead>
+            <tbody>
+            <div th:each="el:${postings}">
+                <tr>
+                    <td th:text="${el.idpostings}"/>
+                    <td th:text="${el.mat_Doc}"/>
+                    <td th:text="${el.item}"/>
+                    <td th:text="${el.doc_Date}"/>
+                    <td th:text="${el.pstngdate}"/>
+                    <td th:text="${el.material_Description}"/>
+                    <td th:text="${el.quantity}"/>
+                    <td th:text="${el.bun}"/>
+                    <td th:text="${el.amountLC}"/>
+                    <td th:text="${el.crcy}"/>
+                    <td th:text="${el.username}"/>
+                    <td th:text="${el.authdelivery}"/>
+                </tr>
+            </div>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
